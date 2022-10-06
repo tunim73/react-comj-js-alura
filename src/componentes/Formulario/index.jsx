@@ -56,8 +56,6 @@ const Formulario = (props) => {
                    <Botao>
                         criar card
                    </Botao>
-
-
                </form>
            </section>
         

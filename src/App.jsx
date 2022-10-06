@@ -7,7 +7,7 @@ const App = () => {
 
     const times = [
         {
-            nome: 'Programação ',
+            nome: 'Programação',
             corPrimaria: '#57C278',
             corSecundaria: '#D9F7E9'
         },
@@ -47,8 +47,9 @@ const App = () => {
 
     const [colaboradores, setColaboradores] = useState([]);
     
-    const adicionarNovoColaborador = (colaborador) => {  
+    const adicionarNovoColaborador = (colaborador) => {    
         setColaboradores([...colaboradores, colaborador])
+        console.log("colaboradores === ", colaboradores)
     }
 
     return (
@@ -58,8 +59,12 @@ const App = () => {
             times={times.map(time => time.nome)}
             novoColaborador ={colaborador => adicionarNovoColaborador(colaborador)} />
             
-            {times.map(time => <Time key={time.nome} nome ={time.nome} 
-            corPrimaria ={time.corPrimaria} corSecundaria = {time.corSecundaria} />)}    
+            {times.map(time => < Time key={time.nome} 
+            nome ={time.nome} 
+            corPrimaria ={time.corPrimaria} 
+            corSecundaria = {time.corSecundaria} 
+            colaboradores = {colaboradores.filter (colaborador => colaborador.time == time.nome)}
+            />)}    
             
         </div>
     )
