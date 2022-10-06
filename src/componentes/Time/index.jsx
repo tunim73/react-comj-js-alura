@@ -9,18 +9,16 @@ const Time = (props) => {
 
 
     return(
-        
+        (props.colaboradores.length>0) ?
         <section className="time" style ={css} >
             <h3 style={{borderColor: props.corPrimaria }}>{props.nome} </h3>
 
             <div className="colaboradores">
                 {props.colaboradores.map(colaborador => <Colaborador
                 colaborador ={colaborador}/>)} 
-            </div>
-
-
-            
+            </div>        
         </section>
+        : ''
     )
 }
 
@@ -45,6 +43,10 @@ const Time = ({obj}) => {
     )
 }
 
+*/
 
+/*
+condicional de renderização props.colaboradores.length>0 && ou (props.colaboradores.length>0) &&
+ou como operador ternário, caso eu queira uma situação de verdadeiro ou falso
 
 */

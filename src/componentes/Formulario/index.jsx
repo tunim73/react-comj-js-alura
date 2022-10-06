@@ -10,7 +10,8 @@ const Formulario = (props) => {
     const[nome,setNome]=useState('');
     const[cargo,setCargo]=useState('');
     const[imagem, setImagem]=useState('');
-    const[time, setTime]=useState('');
+    const[time, setTime]=useState('Programação'); 
+    // alterei o setTime, pois tinha um bug sobre o value começar vazio
     
     const aoSalvar  = (event)=>{
         event.preventDefault();
@@ -20,6 +21,11 @@ const Formulario = (props) => {
             imagem,
             time
         });
+        //para limpar o forms após a sua utilização
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setTime('Programação')
     }
 
 
