@@ -8,5 +8,15 @@ const Banner = () => {
         </header>            
     )
 }
+/*
+infos:
+
+pasta public no diretório raiz e não usar o caminho de retorno ../../../public/assets/banner.png
+a dorma acima não funcionou no deploy da página.
+
+
+*/
+
+
 
 export default Banner
