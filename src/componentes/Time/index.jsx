@@ -7,6 +7,15 @@ const Time = (props) => {
         backgroundColor: props.corSecundaria,
     }
 
+    const keyDefine = (colaborador) => {
+        return `key${colaborador.nome}+${colaborador.time}`
+    }    
+/*
+    function keyDefine (colaborador) {
+        return `key${colaborador.nome}+${colaborador.time}`
+    }
+*/
+
 
     return(
         (props.colaboradores.length>0) ?
@@ -14,8 +23,11 @@ const Time = (props) => {
             <h3 style={{borderColor: props.corPrimaria }}>{props.nome} </h3>
 
             <div className="colaboradores">
-                {props.colaboradores.map(colaborador => <Colaborador
-                colaborador ={colaborador}/>)} 
+                {props.colaboradores.map(colaborador => <Colaborador 
+                key = {keyDefine(colaborador)}
+                colaborador ={colaborador}
+                corPrimaria = {props.corPrimaria}
+                />)} 
             </div>        
         </section>
         : ''

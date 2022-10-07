@@ -10,7 +10,7 @@ const Formulario = (props) => {
     const[nome,setNome]=useState('');
     const[cargo,setCargo]=useState('');
     const[imagem, setImagem]=useState('');
-    const[time, setTime]=useState('Programação'); 
+    const[time, setTime]=useState(''); 
     // alterei o setTime, pois tinha um bug sobre o value começar vazio
     
     const aoSalvar  = (event)=>{
@@ -25,7 +25,7 @@ const Formulario = (props) => {
         setNome('');
         setCargo('');
         setImagem('');
-        setTime('Programação')
+        setTime('')
     }
 
 

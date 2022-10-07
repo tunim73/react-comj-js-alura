@@ -49,7 +49,6 @@ const App = () => {
     
     const adicionarNovoColaborador = (colaborador) => {    
         setColaboradores([...colaboradores, colaborador])
-        console.log("colaboradores === ", colaboradores)
     }
 
     return (
